@@ -1,0 +1,64 @@
+{% extends 'layout_auth.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-4">
+    <div class="card mt-5">
+    <div class="caard-title">
+    <h4>Register Here</h4>
+    </div>
+    <div class="card-body">
+
+
+    <form action="" method="post">
+     {% csrf_token %}
+    <div class="form-group">
+        <label for="exampleInputfName"></label>
+        <input type="text" class="form-control" name="first name" id="InputName" aria-describedby="fNameHelp">
+        <small id="NameHelp" class="form-text text-muted">First Name</small>
+    </div> 
+        <div class="form-group">
+        <label for="exampleInputlName"></label>
+        <input type="text" class="form-control" name="last name" id="InputName" aria-describedby="lNameHelp">
+        <small id="NameHelp" class="form-text text-muted">Last Name</small>
+    </div> 
+    <div class="form-group">
+        <label for="exampleInputlName"></label>
+        <input type="text" class="form-control form-control-sm" name="username" id="InputUserName" aria-describedby="UserNameHelp">
+        <small id="UserNameHelp" class="form-text text-muted">UserName</small>
+    </div>
+    <div class="invalid_feedback invalid-feedback" style="display:none"></div>
+    <div class="form-group">
+        <label for="InputEmail1">Email address</label>
+        <input type="email" class="form-control" name="email" id="InputEmail1" aria-describedby="emailHelp">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="InputPassword1">Password</label>
+        <input type="password" class="form-control"name="password" id="InputPassword1">
+    </div>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="eCheck1">
+        <label class="form-check-label" for="Check1">Check me out</label>
+          <small class="float-right">SHOW</show>
+    </div>
+  
+    <input type="submit" value="Register"  class="btn btn-block btn-primary">
+</form>
+</div>
+
+    </div>
+    
+    </div>
+    </div>
+</div>
+<script scr='{% static "js/register.js" %}'></script>
+{% endblock content %}
+
+
+
+ <!-- Add this link: [<a class="btn btn-info btn-lg" href="/" role="button">Sample page</a>] to the button to link pages through the button -->
